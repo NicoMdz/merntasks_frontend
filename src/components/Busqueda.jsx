@@ -10,6 +10,7 @@ const Busqueda = () => {
     const [ busqueda, setBusqueda] = useState('') 
 
     const { buscador, handleBuscador, proyectos } = useProyectos()
+
     
     const proyectosFiltrados = busqueda === "" ? [] : proyectos.filter( proyecto => proyecto.nombre.toLowerCase().includes(busqueda.toLowerCase()))
     return (
